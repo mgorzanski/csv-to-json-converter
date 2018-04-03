@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const csvToJson = (file) => {
+const csvToJson = (file = 'customer-data.csv') => {
     fs.readFile(path.join(__dirname, file), (err, data) => {
         if (err) return console.error(err);
         data = data.toString();
@@ -22,7 +22,11 @@ const csvToJson = (file) => {
             json.push(item);
         }
         json = JSON.stringify(json);
-        console.log(json);
+        
+        //save JSON to file
+        fs.writeFile(path.join(__dirname, 'customer-data.json'), json, (err) => {
+            if (err) return console.error(err);
+        });
     });
 };
 
