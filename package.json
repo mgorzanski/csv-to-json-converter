@@ -1,0 +1,11 @@
+{
+  "name": "csv-to-json-converter",
+  "version": "1.0.0",
+  "description": "Convert a CSV file to JSON format.",
+  "main": "csv-to-json-converter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateusz Górzański",
+  "license": "ISC"
+}
